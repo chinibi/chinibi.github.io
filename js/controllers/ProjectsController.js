@@ -21,7 +21,7 @@
       // add new projects to the top of this list
       vm.projects.push({
         title: 'SENTiment',
-        screenshot: '',
+        imageURL: 'images/pewpewpew.png',
         dates: 'May 2016',
         website: 'http://sentiment-ga.herokuapp.com',
         github: 'http://github.com/chinibi/sentiment',
@@ -31,7 +31,7 @@
 
       vm.projects.push({
         title: 'Whiteboard',
-        screenshot: '',
+        imageURL: '',
         dates: 'April 2016',
         website: 'http://wdi-forums.herokuapp.com',
         github: 'http://github.com/chinibi/whiteboard',
@@ -41,7 +41,7 @@
 
       vm.projects.push({
         title: 'pewpewpew',
-        screenshot: '',
+        imageURL: '',
         dates: 'March 2016',
         website: 'http://chinibi.github.io/pewpewpew',
         github: 'http://github.com/chinibi/pewpewpew',

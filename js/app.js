@@ -1,3 +1,3 @@
 (function () {
-  angular.module('portfolio');
+  angular.module('portfolio', ['ui.router', 'ngResource']);
 })();
