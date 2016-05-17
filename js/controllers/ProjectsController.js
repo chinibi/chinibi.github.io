@@ -1,7 +1,7 @@
 (function () {
   angular
     .module('portfolio')
-    .controller('ProjectsController', ProjectsController)
+    .controller('ProjectsController', [ProjectsController])
 
     function ProjectsController() {
       var vm = this;
@@ -19,11 +19,13 @@
 
       // List of projects
       // add new projects to the top of this list
+
       vm.projects.push({
         title: 'SENTiment',
-        imageURL: 'images/pewpewpew.png',
+        imageURL: 'images/sentiment.png',
         dates: 'May 2016',
         website: 'http://sentiment-ga.herokuapp.com',
+        modal: true,
         github: 'http://github.com/chinibi/sentiment',
         tech: ['Node.js', 'Express', 'MongoDB', 'Bootstrap'],
         description: 'This website grabs your tweets from the Twitter API and feeds them through a sentiment analyzer run by IBM Watson.  Users can select a date range to pull their tweets and share their results through Twitter or Facebook.'
@@ -31,7 +33,7 @@
 
       vm.projects.push({
         title: 'Whiteboard',
-        imageURL: '',
+        imageURL: 'images/whiteboard.png',
         dates: 'April 2016',
         website: 'http://wdi-forums.herokuapp.com',
         github: 'http://github.com/chinibi/whiteboard',
@@ -41,7 +43,7 @@
 
       vm.projects.push({
         title: 'pewpewpew',
-        imageURL: '',
+        imageURL: 'images/pewpewpew.png',
         dates: 'March 2016',
         website: 'http://chinibi.github.io/pewpewpew',
         github: 'http://github.com/chinibi/pewpewpew',

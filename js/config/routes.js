@@ -8,14 +8,10 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: '_home.html'
-      })
-      .state('portfolio', {
-        url: '/portfolio',
-        templateUrl: '_projects.html',
+        templateUrl: '_home.html',
         controller: 'ProjectsController',
         controllerAs: 'pcvm'
-      });
+      })
 
     $urlRouterProvider.otherwise('/');
   }
