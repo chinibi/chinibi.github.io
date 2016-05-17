@@ -1,21 +1,24 @@
 <div class="jumbotron text-center">
   <div class="container">
-    <h1>Hello! My name is Trevor and I'm a web developer.</h1>
+    <h2>Hello! My name is Trevor and I'm a web developer.</h2>
   </div>
 </div>
 
 <div id='portfolio' class='container-fluid'>
-  <div ng-repeat='project in pcvm.projects'>
-    <img class="img-responsive thumbnail" src="{{project.imageURL}}" />
-    <h3>{{project.title}}</h3>
-    <a href="{{project.website}}"></a>
-    <a href="{{project.github}}"></a>
-    <p>{{project.description}}</p>
-    <ul class="tech-list">
-      <li ng-repeat='each in project.tech'>
-        {{each}}
-      </li>
-    </ul>
-    <hr />
+  <div class="clearfix project-entry" ng-repeat='project in pcvm.projects'>
+    <div class='col-sm-6'>
+      <img class="img-responsive img-thumbnail" src="{{project.imageURL}}" />
+    </div>
+    <div class='col-sm-6'>
+      <h2>{{project.title}}</h3>
+      <a href="{{project.website}}"></a>
+      <a href="{{project.github}}"></a>
+      <p>{{project.description}}</p>
+      <ul class="tech-list">
+        <li ng-repeat='each in project.tech'>
+          {{each}}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
