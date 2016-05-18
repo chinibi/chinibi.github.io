@@ -9,8 +9,8 @@
       .state('home', {
         url: '/',
         templateUrl: '_home.html',
-        controller: 'MainController',
-        controllerAs: 'vm'
+        controller: 'ProjectsController',
+        controllerAs: 'pcvm'
       })
 
     $urlRouterProvider.otherwise('/');
