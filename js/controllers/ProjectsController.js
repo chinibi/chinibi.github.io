@@ -25,7 +25,6 @@
         imageURL: 'images/sentiment.png',
         dates: 'May 2016',
         website: 'http://sentiment-ga.herokuapp.com',
-        modal: true,
         github: 'http://github.com/chinibi/sentiment',
         tech: ['Node.js', 'Express', 'MongoDB', 'Bootstrap'],
         description: 'This website grabs your tweets from the Twitter API and feeds them through a sentiment analyzer run by IBM Watson.  Users can select a date range to pull their tweets and share their results through Twitter or Facebook.'
