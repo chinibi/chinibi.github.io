@@ -6,20 +6,23 @@
 
 <div id='portfolio' class='container-fluid'>
   <div class="clearfix project-entry" ng-repeat='project in pcvm.projects'>
+
     <div class='col-sm-6'>
       <img class="img-responsive img-thumbnail" src="{{project.imageURL}}" />
     </div>
+
     <div class='col-sm-6'>
       <a href="{{project.website}}" target="_blank"><h2>{{project.title}}</h2></a>
       <a href="{{project.github}}" target="_blank"><small>GitHub</small></a>
       <p>{{project.dates}}</p>
       <p>{{project.description}}</p>
-      <ul class="tech-list">
-        <li ng-repeat='each in project.tech'>
+      <ul class="list-inline">
+        <li class="list-inline-item" ng-repeat='each in project.tech'>
           {{each}}
         </li>
       </ul>
     </div>
+
   </div>
 </div>
 
