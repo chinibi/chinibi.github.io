@@ -1,7 +1,12 @@
 /* general classes */
+
 body {
   background-color: hsl(222, 11%, 18%);
   color: gray;
+}
+
+*::selection {
+  background: white;
 }
 
 .jumbotron {
@@ -17,17 +22,6 @@ a:hover, a:active {
   text-decoration: none;
   color: rgb(140,140,220);
 }
-
-/* navbar */
-/*.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}*/
 
 /* project list */
 .project-entry {
