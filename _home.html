@@ -5,15 +5,15 @@
 </div>
 
 <div id='portfolio' class='container-fluid'>
-  <div class="clearfix project-entry" ng-repeat='project in pcvm.projects'>
+  <div class="clearfix project-entry" ng-repeat='project in vm.projects'>
 
     <div class='col-sm-6'>
       <img class="img-responsive img-thumbnail" src="{{project.imageURL}}" />
     </div>
 
     <div class='col-sm-6'>
-      <a href="{{project.website}}" target="_blank"><h2>{{project.title}}</h2></a>
-      <a href="{{project.github}}" target="_blank"><small>GitHub</small></a>
+      <h2><a href="{{project.website}}" target="_blank">{{project.title}}</a></h2>
+      <small><a href="{{project.github}}" target="_blank">GitHub</a></small>
       <p>{{project.dates}}</p>
       <p>{{project.description}}</p>
       <ul class="list-inline">
@@ -27,6 +27,5 @@
 </div>
 
 <div id='footer' class="container text-center">
-  <a class="btn btn-social-icon btn-github" href="https://github.com/chinibi" target="_blank"><span class="fa fa-github"></span></a>
-  <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/trevorpham" target="_blank"><span class="fa fa-linkedin"></span></a>
+  <a ng-repeat="each in vm.social" class="btn btn-social-icon btn-{{each.site}}" href="{{each.link}}" target="_blank"><span class="fa fa-{{each.site}}"></span></a>
 </div>
