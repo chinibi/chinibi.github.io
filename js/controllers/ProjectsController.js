@@ -21,6 +21,16 @@
       // add new projects to the top of this list
 
       vm.projects.push({
+        title: 'The Greenest Badges Ever',
+        imageURL: 'images/greenest.png',
+        dates: 'May 2016',
+        website: 'http://the-greenest-badges.herokuapp.com',
+        github: 'http://github.com/chinibi/the-greenest-badges',
+        tech: ['Node.js', 'Express', 'MongoDB', 'AngularJS', 'Bootstrap', 'jwt'],
+        description: 'Change your lifestyle and go green by completing a set of challenges every week.  Completing a set awards a shiny internet badge.  Link with friends to compare how many badges you all have.'
+      })
+
+      vm.projects.push({
         title: 'SENTiment',
         imageURL: 'images/sentiment.png',
         dates: 'May 2016',
