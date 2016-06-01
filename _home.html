@@ -8,12 +8,12 @@
   <div class="clearfix project-entry" ng-repeat='project in pcvm.projects'>
 
     <div class='col-sm-6'>
-      <img class="img-responsive img-thumbnail" src="{{project.imageURL}}" />
+      <img class="img-responsive img-thumbnail" ng-src="{{project.imageURL}}" />
     </div>
 
     <div class='col-sm-6'>
-      <a href="{{project.website}}" target="_blank"><h2>{{project.title}}</h2></a>
-      <a href="{{project.github}}" target="_blank"><small>GitHub</small></a>
+      <a ng-href="{{project.website}}" target="_blank"><h2>{{project.title}}</h2></a>
+      <a ng-href="{{project.github}}" target="_blank"><small>GitHub</small></a>
       <p>{{project.dates}}</p>
       <p>{{project.description}}</p>
       <ul class="list-inline">
