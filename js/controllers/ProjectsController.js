@@ -21,6 +21,16 @@
       // add new projects to the top of this list
 
       vm.projects.push({
+        title: 'Guild Wars 2 Inventory Search',
+        imageURL: 'images/gw2invsearch.png',
+        dates: 'June 2016',
+        website: 'http://gw2-inventory-search.herokuapp.com',
+        github: 'http://github.com/chinibi/gw2-inventory-search',
+        tech: ['Node.js', 'Express', 'AngularJS', 'lodash', 'Bootstrap'],
+        description: "For players of Guild Wars 2, an online multiplayer role-playing game.  This app searches through your account for the specified item and tells you which of your characters is holding that item.  Yes that's a real API key in the screenshot.  The Guild Wars 2 API doesn't contain sensitive account information and is read-only so there's little harm in sharing it."
+      })
+
+      vm.projects.push({
         title: 'The Greenest Badges Ever',
         imageURL: 'images/greenest.png',
         dates: 'May 2016',
@@ -36,7 +46,7 @@
         dates: 'May 2016',
         website: 'http://sentiment-ga.herokuapp.com',
         github: 'http://github.com/chinibi/sentiment',
-        tech: ['Node.js', 'Express', 'MongoDB', 'Bootstrap'],
+        tech: ['Node.js', 'Express', 'MongoDB', 'ejs', 'Bootstrap'],
         description: 'This website grabs your tweets from the Twitter API and feeds them through a sentiment analyzer run by IBM Watson.  Users can select a date range to pull their tweets and share their results through Twitter or Facebook.'
       })
 
@@ -46,7 +56,7 @@
         dates: 'April 2016',
         website: 'http://wdi-forums.herokuapp.com',
         github: 'http://github.com/chinibi/whiteboard',
-        tech: ['Ruby on Rails', 'HTML5 Canvas', 'Bootstrap', 'PostgreSQL'],
+        tech: ['Ruby on Rails', 'HTML5 Canvas', 'Bootstrap', 'erb', 'jQuery', 'SCSS', 'PostgreSQL'],
         description: 'Whiteboard is an imageboard forum where users can draw on their posts. Users can create accounts, threads, and comments.  The backend is run on Rails.'
       })
 
@@ -56,7 +66,7 @@
         dates: 'March 2016',
         website: 'http://chinibi.github.io/pewpewpew',
         github: 'http://github.com/chinibi/pewpewpew',
-        tech: ['JavaScript', 'HTML5 Canvas'],
+        tech: ['JavaScript', 'HTML5 Canvas', 'jQuery'],
         description: 'This Canvas game is inspired by turn-based artillery games like Scorched Earth and Worms.  Two players each control a tank and compete to hit more targets than the other. Pewpewpew makes heavy use of Object constructors to create each entity in the game and has its own custom engine for handling physics and collision detection.'
       })
     }
