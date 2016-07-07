@@ -63,6 +63,94 @@ var projects = [
   }
 ];
 
+var Header = React.createClass({
+  render: function() {
+    return (
+      <div className="jumbotron text-center">
+        <div className="container">
+          <h2>Hello! My name is Trevor and I'm a web developer.</h2>
+        </div>
+      </div>
+    );
+  }
+});
+
+var ProjectList = React.createClass({
+  render: function() {
+
+    var projectList = this.props.projects.map(function(project, index) {
+      return (
+        <ProjectListItem
+          key={index}
+          project={project}
+          className="list-inline-item"
+        />
+      );
+    });
+
+    return (
+      <div id="portfolio" className="container-fluid">
+        {projectList}
+      </div>
+    );
+
+  }
+});
+
+var ProjectListItem = React.createClass({
+
+  render: function() {
+    var project     = this.props.project;
+    var title       = project.title;
+    var imageURL    = project.imageURL;
+    var dates       = project.dates;
+    var website     = project.website;
+    var github      = project.github;
+    var tech        = project.tech;
+    var description = project.description;
+
+    var techList = tech.map(function(each, index) {
+      return (
+        <li className="list-inline-item">
+          {each}
+        </li>
+      );
+    });
+
+    return (
+      <div className="clearfix project-entry">
+
+        <div className='col-sm-6'>
+          <img className="img-responsive img-thumbnail" src={imageURL} />
+        </div>
+
+        <div className='col-sm-6'>
+          <a href={website} target="_blank"><h2>{title}</h2></a>
+          <a href={github} target="_blank"><small>GitHub</small></a>
+          <p>{dates}</p>
+          <p>{description}</p>
+          <ul className="list-inline">
+            {techList}
+          </ul>
+        </div>
+
+      </div>
+    );
+  }
+
+});
+
+var Footer = React.createClass({
+  render: function() {
+    return (
+      <div id='footer' className="container text-center">
+        <a className="btn btn-social-icon btn-github" href="https://github.com/chinibi" target="_blank"><span class="fa fa-github"></span></a>
+        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/trevorpham" target="_blank"><span className="fa fa-linkedin"></span></a>
+      </div>
+    );
+  }
+});
+
 var App = React.createClass({
   render: function() {
     return (
