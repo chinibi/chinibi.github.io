@@ -1,5 +1,14 @@
 var projects = [
   {
+    title: 'Danny Boy Seeds',
+    imageURL: '/images/dannyboyseeds.png',
+    dates: 'July 2016',
+    website: 'http://dannyboyseeds.com',
+    tech: ['Materialize'],
+    description: "My first freelancing project.  Danny Boy Seeds wholesales\
+    vegetable seeds across the country."
+  },
+  {
     title: 'Guild Wars 2 Inventory Search',
     imageURL: '/images/gw2invsearch.png',
     dates: 'June 2016',
@@ -131,7 +140,7 @@ var ProjectListItem = React.createClass({
 
         <div className='col-sm-6'>
           <a href={website} target="_blank"><h2>{title}</h2></a>
-          <a href={github} target="_blank"><small>GitHub</small></a>
+          {github && <a href={github} target="_blank"><small>GitHub</small></a>}
           <p>{dates}</p>
           <p>{description}</p>
           <ul className="list-inline">
