@@ -140,7 +140,7 @@ var ProjectListItem = React.createClass({
 
         <div className='col-sm-6'>
           <a href={website} target="_blank"><h2>{title}</h2></a>
-          {github && <a href={github} target="_blank"><small>GitHub</small></a>}
+          {github ? <a href={github} target="_blank"><small>GitHub</small></a> : null}
           <p>{dates}</p>
           <p>{description}</p>
           <ul className="list-inline">
