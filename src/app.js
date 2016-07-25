@@ -72,7 +72,7 @@ var projects = [
   }
 ];
 
-var Header = React.createClass({
+const Header = React.createClass({
   render: function() {
     return (
       <div className="jumbotron text-center">
@@ -89,10 +89,10 @@ var Header = React.createClass({
   }
 });
 
-var ProjectList = React.createClass({
+const ProjectList = React.createClass({
   render: function() {
 
-    var projectList = this.props.projects.map(function(project, index) {
+    const projectList = this.props.projects.map((project, index) => {
       return (
         <ProjectListItem
           key={index}
@@ -111,19 +111,14 @@ var ProjectList = React.createClass({
   }
 });
 
-var ProjectListItem = React.createClass({
+const ProjectListItem = React.createClass({
 
   render: function() {
-    var project     = this.props.project;
-    var title       = project.title;
-    var imageURL    = project.imageURL;
-    var dates       = project.dates;
-    var website     = project.website;
-    var github      = project.github;
-    var tech        = project.tech;
-    var description = project.description;
+    const {project: {
+      title, imageURL, dates, website, github, tech, description
+    }} = this.props;
 
-    var techList = tech.map(function(each, index) {
+    const techList = tech.map((each, index) => {
       return (
         <li className="list-inline-item">
           {each}
@@ -154,7 +149,7 @@ var ProjectListItem = React.createClass({
 
 });
 
-var Footer = React.createClass({
+const Footer = React.createClass({
   render: function() {
     return (
       <div id='footer' className="container text-center">
@@ -165,7 +160,7 @@ var Footer = React.createClass({
   }
 });
 
-var App = React.createClass({
+const App = React.createClass({
   render: function() {
     return (
       <div>

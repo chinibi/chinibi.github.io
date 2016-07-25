@@ -34,7 +34,7 @@ a:hover, a:active {
 
 @media not screen and (max-width: 768px) {
   #portfolio {
-    max-width: 70vw;
+    max-width: 75vw;
     margin: 0 auto;
   }
 }
