@@ -1,4 +1,4 @@
-var projects = [
+const projects = [
   {
     title: 'Danny Boy Seeds',
     imageURL: '/images/dannyboyseeds.png',
