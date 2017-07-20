@@ -19,6 +19,10 @@ body {
   text-align: center;
 }
 
+a {
+  color: rgb(107, 153, 193);
+}
+
 a:hover, a:active {
   text-decoration: none;
   color: rgb(140,140,220);

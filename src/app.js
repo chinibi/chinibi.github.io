@@ -1,16 +1,51 @@
 const projects = [
   {
+    title: 'Step-By-Step Ordering System for WooCommerce',
+    imageURL: '/images/wc-step-by-step-ordering.png',
+    dates: 'July 2017',
+    website: 'http://stepbystepsys.com',
+    github: 'https://github.com/chinibi/wc-step-by-step-ordering-free',
+    tech: ['PHP', 'WordPress', 'JavaScript', 'WooCommerce'],
+    description: (
+      <div>
+        <p>Created a step-by-step ordering plugin that extends the WooCommerce WordPress library.
+          Customers are guided through a store by progressing through a number of steps each showing different types of products.
+        </p>
+        <p>Process includes guiding the customer through different categories of
+          products and services.  Website admins can customize the ordering process
+          with a drag-and-drop sortable list interface.  Created preset color schemes
+          and navbar shapes to provide customizable visual elements for non-developers.
+        </p>
+      </div>
+    )
+  },
+  {
+    title: 'Access Cremation',
+    imageURL: '/images/accesscremation.jpg',
+    dates: 'February 2017',
+    tech: ['PHP', 'WordPress', 'JavaScript', 'WooCommerce'],
+    description: (
+      <div>
+        <p style={{fontSize: '1.2em'}}>This website is not yet online.</p>
+        <p>Created an e-commerce store for a California cremation service.  The
+          store takes users through a number of steps in a guided ordering process.</p>
+      </div>
+    )
+  },
+  {
     title: 'Pacific Family Dental',
     imageURL: '/images/pacificfamilydental.png',
     dates: 'January 2017',
-    website: 'http://pacific-family-dental.herokuapp.com',
     tech: ['JavaScript', 'Node.js', 'PostgreSQL', 'React', 'Redux'],
     description: (
-      <p>
-        An Orange County family dentistry site where patients can schedule their
-        appointments online.  This is a React SPA with a Node and Postgres API backend.
-        You may view the demo site by clicking the link above.
-      </p>
+      <div>
+        <p style={{fontSize: '1.2em'}}>This website is not yet online.</p>
+        <p>
+          An Orange County family dentistry site where patients can schedule their
+          appointments online.  This is a React SPA with a Node and Postgres API backend.
+          You may view the demo site by clicking the link above.
+        </p>
+      </div>
     )
   },
   {
@@ -20,13 +55,15 @@ const projects = [
     website: 'http://csunjazz.com',
     tech: ['Wordpress', 'jQuery'],
     description: (
-      <p>
-        Collaborated with Electronic Methods to redesign CSU Northridge's
-        Jazz Studies website.  Replaced images that served as simple backgrounds, borders,
-        and section dividers with CSS to greatly reduce page size.  Rendered the site
-        mobile-responsive with CSS media queries and jQuery.  Transplanted a
-        slideshow from another project to the site's front page.
-      </p>
+      <div>
+        <p>
+          Collaborated with Electronic Methods to redesign CSU Northridge's
+          Jazz Studies website.  Replaced images that served as simple backgrounds, borders,
+          and section dividers with CSS to greatly reduce page size.  Rendered the site
+          mobile-responsive with CSS media queries and jQuery.  Transplanted a
+          slideshow from another project to the site's front page.
+        </p>
+      </div>
     )
   },
   {
@@ -62,13 +99,15 @@ const projects = [
     title: 'The Greenest Badges Ever',
     imageURL: '/images/greenest.png',
     dates: 'May 2016',
-    website: 'http://the-greenest-badges.herokuapp.com',
     github: 'http://github.com/chinibi/the-greenest-badges',
     tech: ['Node.js', 'Express', 'MongoDB', 'AngularJS', 'Bootstrap', 'jwt'],
     description: (
-      <p>Change your lifestyle and go green by completing a set of
-      challenges every week.  Completing a set awards a shiny internet badge.
-      Link with friends to compare how many badges you all have.</p>
+      <div>
+        <p style={{fontSize: '1.2em'}}>This website is now offline.</p>
+        <p>Change your lifestyle and go green by completing a set of
+        challenges every week.  Completing a set awards a shiny internet badge.
+        Link with friends to compare how many badges you all have.</p>
+      </div>
     )
   },
   {
@@ -97,14 +136,16 @@ const projects = [
     title: 'Whiteboard',
     imageURL: '/images/whiteboard.png',
     dates: 'April 2016',
-    website: 'http://wdi-forums.herokuapp.com',
     github: 'http://github.com/chinibi/whiteboard',
     tech: ['Ruby on Rails', 'HTML5 Canvas', 'Bootstrap', 'erb', 'jQuery',
            'SCSS', 'PostgreSQL'],
     description: (
-      <p>Whiteboard is an imageboard forum where users can draw on
-        their posts. Users can create accounts, threads, and comments.
-        The backend is run on Rails.</p>
+      <div>
+        <p style={{fontSize: '1.2em'}}>This website is now offline.</p>
+        <p>Whiteboard is an imageboard forum where users can draw on
+          their posts. Users can create accounts, threads, and comments.
+          The backend is run on Rails.</p>
+      </div>
     )
   },
   {
@@ -186,7 +227,7 @@ const ProjectListItem = React.createClass({
         </div>
 
         <div className='col-sm-6'>
-          <a href={website} target="_blank"><h2>{title}</h2></a>
+          {website ? <h2><a href={website} target="_blank">{title}</a></h2> : <h2>{title}</h2>}
           {github ? <a href={github} target="_blank"><small>GitHub</small></a> : null}
           <p>{dates}</p>
           {description}
@@ -205,8 +246,8 @@ const Footer = React.createClass({
   render: function() {
     return (
       <div id='footer' className="container text-center">
-        <a className="btn btn-social-icon btn-github" href="https://github.com/chinibi" target="_blank"><span className="fa fa-github"></span></a>
-        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/trevorpham" target="_blank"><span className="fa fa-linkedin"></span></a>
+        <a className="btn btn-social-icon btn-github" href="https://github.com/chinibi" target="_blank" rel="noopener noreferrer"><span className="fa fa-github"></span></a>
+        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/trevorpham" target="_blank" rel="noopener noreferrer"><span className="fa fa-linkedin"></span></a>
       </div>
     );
   }
