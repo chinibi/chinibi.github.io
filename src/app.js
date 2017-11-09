@@ -238,7 +238,7 @@ class MainContainer extends Component {
         return <ProjectList projects={interests} />;
         break;
       default:
-        return <ProjectList projects={projects} />;
+        return <ProjectList projects={work} />;
         break;
     }
   }
