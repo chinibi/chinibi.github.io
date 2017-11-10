@@ -70,6 +70,16 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
+.about-me-container {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgb(215, 215, 215);
+}
+
+.about-me-body {
+  font-size: 18px;
+}
+
 /* project list */
 
 @media not screen and (max-width: 768px) {
