@@ -73,12 +73,12 @@ projects.interests = [
     title: 'Whiteboard',
     imageURL: '/dist/images/whiteboard.png',
     dates: 'April 2016',
+    website: 'http://whiteboard-forums.herokuapp.com',
     github: 'http://github.com/chinibi/whiteboard',
     tech: ['Ruby on Rails', 'HTML5 Canvas', 'Bootstrap', 'erb', 'jQuery',
            'SCSS', 'PostgreSQL'],
     description: (
       <div>
-        <p style={{fontSize: '1.2em'}}>This website is now offline.</p>
         <p>Whiteboard is an imageboard forum where users can draw on
           their posts. Users can create accounts, threads, and comments.
           The backend is run on Rails.</p>
