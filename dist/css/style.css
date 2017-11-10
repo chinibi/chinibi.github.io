@@ -34,6 +34,42 @@ a:hover, a:active {
   top: 15px;
 }
 
+/* nav */
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+#navbar {
+  margin-top: -30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #291e1e;
+}
+
+#navbar li {
+  font-size: 1.6em;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  #navbar li {
+    padding-left: 10px;
+  }
+}
+
+#navbar li.active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* project list */
 
 @media not screen and (max-width: 768px) {
