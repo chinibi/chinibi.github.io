@@ -7,6 +7,7 @@ projects.interests = [
     title: 'PhysicsSims',
     imageURL: '/dist/images/physics.jpg',
     dates: 'November 2017',
+    website: 'https://chinibi.github.io/physics-sims',
     github: 'http://github.com/chinibi/physics-sims',
     tech: ['JavaScript', 'Canvas'],
     description: (
